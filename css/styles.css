@@ -32,7 +32,7 @@ body {
   font-weight: bold;
 }
 
-header .btn {
+.btn {
   background-color: #567b95;
   outline: none;
   border: 1px solid black;
@@ -44,10 +44,17 @@ header .btn {
   margin-right: 0.5em;
 }
 
-header .btn a {
+.btn a {
   color: #ffe;
   text-transform: uppercase;
   text-decoration: none;
+}
+
+.article-footer .btn {
+  padding: .6rem 6rem;
+  color: #fff;
+  font-size: .9rem;
+  text-transform: uppercase;
 }
 
 .feature-image-container {
@@ -103,18 +110,19 @@ article p {
   margin: 0 auto;
 }
 
-.article-header .article-info {
+.article-info,
+.article-info .share {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 1.5rem 0;
+  margin: 1rem 0;
 }
 
 .article-header .author {
   font-size: .9rem;
   color: #000;
   font-weight: bold;
-  padding: 1rem 0;
+  padding: .5rem 0;
 }
 
 .article-header .author a {
@@ -132,12 +140,12 @@ article p {
   align-items: center;
 }
 
-.article-header .share li {
+.article-info .share li {
   margin-left: 1.5rem;
   cursor: pointer;
 }
 
-.article-header .share li.social {
+.article-info .share li.social {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -197,4 +205,38 @@ article .caption {
 .grid-card-title {
   font-weight: 900;
   text-transform: uppercase;
+}
+
+.article-footer {
+  width: 620px;
+  margin: .5rem auto;
+}
+
+.article-footer .article-publishing-info,
+.article-footer .article-publishing-info a {
+  font-size: .75rem;
+  color: #666;
+}
+
+.more-articles-section {
+  width: 76%;
+  margin: 4rem auto;
+}
+
+.more-articles-section {
+  width: 76%;
+  margin: 4rem auto;
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  justify-content: center;
+}
+
+.more-articles-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.more-articles-grid .section-title {
+  grid-column: -1/1;
+
 }
