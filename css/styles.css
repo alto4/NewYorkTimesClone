@@ -10,6 +10,11 @@ body {
 }
 
 .nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #fff;
+  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -51,9 +56,9 @@ body {
 }
 
 .article-footer .btn {
-  padding: .6rem 6rem;
+  padding: 0.6rem 6rem;
   color: #fff;
-  font-size: .9rem;
+  font-size: 0.9rem;
   text-transform: uppercase;
 }
 
@@ -66,6 +71,7 @@ body {
   width: 50%;
   line-height: 1.4;
   padding: 1.5rem;
+  margin-top: 6%;
   margin-left: 22%;
   font-weight: 600;
   font-style: italic;
@@ -119,19 +125,19 @@ article p {
 }
 
 .article-header .author {
-  font-size: .9rem;
+  font-size: 0.9rem;
   color: #000;
   font-weight: bold;
-  padding: .5rem 0;
+  padding: 0.5rem 0;
 }
 
 .article-header .author a {
-  border-bottom: .5px dotted #000;
+  border-bottom: 0.5px dotted #000;
   cursor: pointer;
 }
 
 .article-header .date {
-  font-size: .8rem;
+  font-size: 0.8rem;
 }
 
 .article-header .share {
@@ -153,13 +159,13 @@ article p {
   border-radius: 50%;
   width: 1.6rem;
   height: 1.6rem;
-  font-size: .9rem;
+  font-size: 0.9rem;
   font-weight: bold;
 }
 
 .article-text h3 {
   font-size: 1.25rem;
-  padding: .8rem 0;
+  padding: 0.8rem 0;
 }
 
 .article-video,
@@ -175,7 +181,7 @@ article .caption {
 
 .article-image-md-container {
   width: 100%;
-  margin: .8rem auto .5rem;
+  margin: 0.8rem auto 0.5rem;
   max-width: 780px;
 }
 
@@ -186,7 +192,7 @@ article .caption {
 .grid-card-container {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  grid-column-gap: .3rem;
+  grid-column-gap: 0.3rem;
   max-width: 60%;
   margin: 1rem auto;
 }
@@ -194,12 +200,12 @@ article .caption {
 .grid-card img,
 .grid-card {
   max-width: 230px;
-  font-size: .8rem;
+  font-size: 0.8rem;
   line-height: 1.75;
 }
 
 .grid-card p {
-  padding: .3rem;
+  padding: 0.3rem;
 }
 
 .grid-card-title {
@@ -209,12 +215,12 @@ article .caption {
 
 .article-footer {
   width: 620px;
-  margin: .5rem auto;
+  margin: 0.5rem auto;
 }
 
 .article-footer .article-publishing-info,
 .article-footer .article-publishing-info a {
-  font-size: .75rem;
+  font-size: 0.75rem;
   color: #666;
 }
 
@@ -227,16 +233,127 @@ article .caption {
   width: 76%;
   margin: 4rem auto;
   display: grid;
-  grid-template-columns: 3fr 1fr;
+  grid-template-columns: 3fr 1.2fr;
   justify-content: center;
 }
 
 .more-articles-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+  grid-gap: 1rem;
 }
 
 .more-articles-grid .section-title {
   grid-column: -1/1;
+}
 
+.section-title {
+  font-size: 1rem;
+  border-top: 1px solid #000;
+  padding: 1.2rem 0 1.2rem;
+}
+
+.more-articles-grid .article-card {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+}
+
+.article-card .article-image {
+  margin: 0;
+}
+
+.article-card .photographer-small {
+  align-self: flex-end;
+  font-size: 0.6rem;
+  color: #999;
+  padding: 0.2rem;
+}
+
+.article-card .recommended-article-title {
+  font-weight: lighter;
+  font-size: 1rem;
+  letter-spacing: 0.04em;
+}
+
+.article-card .recommended-article-date {
+  font-size: 0.8rem;
+  color: #999;
+  padding-top: 0.4rem;
+}
+
+.popular-articles {
+  padding-left: 2rem;
+}
+
+.popular-article {
+  padding: 0.9rem 0;
+  list-style-type: none;
+  border-top: 1px solid #ddd;
+}
+
+.popular-article a {
+  font-size: 1.15rem;
+  color: #111;
+  text-decoration: none;
+  line-height: 1.2;
+}
+
+/* Footer Styles */
+.footer {
+  width: 76%;
+  margin: 0 auto;
+}
+
+.footer-top {
+  display: flex;
+  justify-content: space-between;
+  border-top: 3px solid #ddd;
+}
+
+.footer-top .footer-logo {
+  width: 170px;
+}
+
+.footer-top a {
+  color: darkblue;
+  font-size: 0.6rem;
+  text-decoration: none;
+  padding-top: 1rem;
+}
+
+.footer-nav {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  margin-top: 1rem;
+}
+
+.footer-nav-list li {
+  list-style-type: none;
+  padding: 0.2rem 0;
+}
+
+.footer-nav-list-title {
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 0.75rem;
+}
+
+.footer-nav-list li a {
+  text-decoration: none;
+  font-size: 0.8rem;
+  color: #000;
+}
+
+.footer-nav-list li a:hover {
+  text-decoration: underline;
+}
+
+.footer-subscribe-info .subscribe-bold a {
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.footer-subscribe-info .subscribe-sm a {
+  font-size: 0.66rem;
 }
